@@ -22,9 +22,9 @@ RSpec.describe "As a visitor" do
     expect(page).to have_content(park.name)
     expect(page).to have_content(park.price)
     within('#rides') do
-      expect(page).to have_content(lightning_racer.name)
-      expect(page).to have_content(storm_runner.name)
-      expect(page).to have_content(the_great_bear.name)
+      expect(page.all('li')[0]).to have_content(lightning_racer.name)
+      expect(page.all('li')[1]).to have_content(storm_runner.name)
+      expect(page.all('li')[2]).to have_content(the_great_bear.name)
     end
     within('#statistics') do
       expect(page).to have_content("Average Thrill Rating of Rides: #{average_rating}")
