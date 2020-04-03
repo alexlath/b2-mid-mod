@@ -15,7 +15,7 @@ RSpec.describe "As a visitor" do
       name: 'The Great Bear',
       rating: 7.5)
 
-    average_rating = (lightning_racer.rating + storm_runner.rating + the_great_bear.rating).fdiv(park.rides.size)
+    average_rating = (lightning_racer.rating + storm_runner.rating + the_great_bear.rating)/(park.rides.size)
 
     visit "/parks/#{park.id}"
 
