@@ -1,0 +1,17 @@
+<header>
+  <h2><%= @park.name %></h2>
+</header>
+<main>
+  <p>Admissions: <%= @park.price %></p>
+  <section id="rides">
+    <h3>Rides</h3>
+    <ol>
+      <% @rides.each do |ride| %>
+        <li><%= ride.name %></li>
+      <% end %>
+    </ol>
+  </section>
+  <section id="statistics">
+    <p>Average Thrill Rating of Rides: <%= @park.average_ride_rating %></p>
+  </section>
+</main>
