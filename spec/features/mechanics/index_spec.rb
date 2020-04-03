@@ -11,7 +11,7 @@ RSpec.describe "As a User" do
 
     visit '/mechanics'
 
-    within(header) do
+    within("header") do
       expect(page).to have_content("All Mechanics")
     end
     expect(page).to have_content("#{mechanic1.name} - #{mechanic1.experience} years of experience")
