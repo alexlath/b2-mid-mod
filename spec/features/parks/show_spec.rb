@@ -27,7 +27,7 @@ RSpec.describe "As a visitor" do
       expect(page).to have_content(the_great_bear.name)
     end
     within('#statistics') do
-      expect(page).to have_content("Average Thrill Rating of Rides: ")
+      expect(page).to have_content("Average Thrill Rating of Rides: #{average_rating}")
     end
   end
 end

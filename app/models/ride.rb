@@ -1,2 +1,3 @@
-class Ride < ApplicatonRecord
+class Ride < ApplicationRecord
+  belongs_to :park
 end
