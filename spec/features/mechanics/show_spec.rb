@@ -10,10 +10,11 @@ RSpec.describe "As a user" do
       price:  '$50.00')
     the_frog_hopper = park.rides.create(
       name: 'The Frog Hopper',
-      rating: 8)
+      mechanics: [mechanic])
     fahrenheit = park.rides.create(
       name: 'Fahrenheit',
-      rating: 7.9)
+      rating: 7.9,
+      mechanics: [mechanic])
     the_kiss_raise = park.rides.create(
       name: 'The Kiss Raise',
       rating: 7.5)
@@ -37,7 +38,7 @@ RSpec.describe "As a user" do
     end
 
     expect(page).to have_current_path("/mechanics/#{mechanic.id}")
-    
+
     within('#rides') do
       expect(page).to have_content(the_frog_hopper.name)
       expect(page).to have_content(fahrenheit.name)
